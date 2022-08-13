@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/tailwind.css" />
+    <title>TailwindCSS Boilerplate</title>
+  </head>
+  <body class="font-primary">
+    <div class="">
+      <header class="bg-white">
+        <nav
+          class="container mx-auto max-w-7xl p-6 lg:flex lg:items-center lg:justify-between"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <a
+                class="text-2xl font-bold text-gray-800 dark:text-white dark:hover:text-gray-300 lg:text-3xl"
+                href="#"
+              >
+                <img src="images/logo.JPG" width="100" alt="" />
+              </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="flex lg:hidden">
+              <button
+                type="button"
+                class="text-gray-700 hover:text-gray-600 focus:text-gray-600 focus:outline-none"
+                aria-label="toggle menu"
+              >
+                <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+                  <path
+                    fill-rule="evenodd"
+                    d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+          <div
+            id="home"
+            class="lg:-px-8 mt-4 flex flex-col space-y-2 lg:mt-0 lg:flex-row lg:space-y-0"
+          >
+            <a
+              class="transform text-lg text-gray-700 transition-colors duration-200 hover:text-blue-700 lg:mx-8"
+              href="#home"
+              >Home</a
+            >
+            <a
+              class="transform text-lg text-gray-700 transition-colors duration-200 hover:text-blue-700 lg:mx-8"
+              href="#services"
+              >Services</a
+            >
+            <a
+              class="transform text-lg text-gray-700 transition-colors duration-200 hover:text-blue-700 lg:mx-8"
+              href="#projects"
+              >Projects</a
+            >
+            <a
+              class="transform text-lg text-gray-700 transition-colors duration-200 hover:text-blue-700 lg:mx-8"
+              href="#contact"
+              >Contact</a
+            >
+          </div>
+        </nav>
+
+        <div class="mx-auto max-w-7xl lg:flex">
+          <div
+            class="flex w-full items-center justify-center px-6 py-8 lg:h-[32rem] lg:w-1/2"
+          >
+            <div class="max-w-xl">
+              <h1
+                class="text-2xl font-bold tracking-wider text-gray-800 lg:text-4xl"
+              >
+                Al Karam
+                <span class="font-extrabold text-blue-700"
+                  >Module Installation & Cleaning</span
+                >
+                Service
+                <!-- <span class="text-blue-600">Idea</span> -->
+              </h1>
+
+              <p
+                class="mt-5 text-base leading-4 text-gray-700 lg:text-base lg:leading-6"
+              >
+                We are established from 2014, at Ajman Emirate UAE. We have all
+                kinds of cleaning works especially in the field of solar panel
+                installation, cleaning and maintenance work. Moreover we
+                undertake Electrical and Plumbing maintenance works also.
+              </p>
+              <p
+                class="mt-5 text-base leading-4 text-gray-700 md:leading-6 lg:text-base"
+              >
+                We have our own sixteen technicians and eight general workers
+                and more than fifty subcontractors are our work strength. We
+                have well experienced foreman and site manager staff for
+                maintain our work quality. Our focus is work quality, time
+                management and safety
+              </p>
+            </div>
+          </div>
+
+          <div class="h-64 w-full lg:h-auto lg:w-1/2">
+            <div
+              class="h-full w-full overflow-hidden rounded-lg bg-cover"
+              style="background-image: url('images/hero.jpg')"
+            >
+              <div class="h-full w-full bg-black opacity-25"></div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="mx-auto mt-20 max-w-7xl border-t-2 border-gray-100">
+      <h1
+        id="services"
+        class="mt-5 scroll-m-20 text-center font-header text-4xl text-gray-800"
+      >
+        Our Services
+      </h1>
+      <section class="body-font text-gray-600">
+        <div class="container mx-auto mt-10 px-5">
+          <div class="-mx-4 -mb-10 -mt-4 flex flex-wrap sm:-m-4">
+            <div class="mb-6 p-4 sm:mb-0 md:w-1/2">
+              <div class="h-64 overflow-hidden rounded-lg">
+                <img
+                  alt="content"
+                  class="h-full w-full object-cover object-center"
+                  src="images/main.jpg"
+                />
+              </div>
+              <h2
+                class="title-font mt-5 font-header text-3xl font-semibold text-blue-700"
+              >
+                Module Cleaning Service
+              </h2>
+              <p class="mt-2 text-base leading-relaxed">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Tempora dignissimos amet eius optio beatae, sequi temporibus?
+                Molestias similique labore excepturi. Soluta sunt tenetur magni
+                officia maiores quo sit voluptatum blanditiis.
+              </p>
+            </div>
+            <div class="mb-6 p-4 sm:mb-0 md:w-1/2">
+              <div class="h-64 overflow-hidden rounded-lg">
+                <img
+                  alt="content"
+                  class="h-full w-full object-cover object-center"
+                  src="images/installation.jpg"
+                />
+              </div>
+              <h2
+                class="title-font mt-5 font-header text-3xl font-semibold text-blue-700"
+              >
+                Module Installation
+              </h2>
+              <p class="mt-2 text-base leading-relaxed">
+                Swag shoivdigoitch literally meditation subway tile tumblr
+                cold-pressed. Gastropub street art beard dreamcatcher neutra,
+                ethical XOXO lumbersexual.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="mx-auto mt-20 max-w-7xl border-t-2 border-gray-100">
+      <h1
+        id="projects"
+        class="mt-5 scroll-m-20 text-center font-header text-4xl text-gray-800"
+      >
+        Our Major Projects
+      </h1>
+      <section class="body-font text-gray-600">
+        <div class="container mx-auto mt-10 px-5">
+          <div class="-mx-4 -mb-10 -mt-4 flex flex-wrap sm:-m-4">
+            <div class="mb-6 p-4 sm:mb-0 md:w-1/3">
+              <div class="h-64 overflow-hidden rounded-lg">
+                <img
+                  alt="content"
+                  class="h-full w-full object-cover object-center"
+                  src="images/main.jpg"
+                />
+              </div>
+              <p class="py-3">
+                <span class="block">
+                  <span>
+                    <span class="font-semibold">Company</span> : DUBAI CARBON
+                    Center of Excellence</span
+                  >
+                </span>
+                <span class="block">
+                  <span class="font-semibold">Project</span> : 1900 Villas O& M
+                  and Ideal Homes Villa project
+                </span>
+                <span class="block"
+                  ><span class="font-semibold">Work Description</span> : Solar
+                  Panel Cleaning, Operation & Maintenance.
+                </span>
+              </p>
+            </div>
+            <div class="mb-6 p-4 sm:mb-0 md:w-1/3">
+              <div class="h-64 overflow-hidden rounded-lg">
+                <img
+                  alt="content"
+                  class="h-full w-full object-cover object-center"
+                  src="images/main.jpg"
+                />
+              </div>
+              <p class="py-3">
+                <span class="block">
+                  <span>
+                    <span class="font-semibold">Company</span> : DUBAI CARBON
+                    Center of Excellence</span
+                  >
+                </span>
+                <span class="block">
+                  <span class="font-semibold">Project</span> : 1900 Villas O& M
+                  and Ideal Homes Villa project
+                </span>
+                <span class="block"
+                  ><span class="font-semibold">Work Description</span> : Solar
+                  Panel Cleaning, Operation & Maintenance.
+                </span>
+              </p>
+            </div>
+            <div class="mb-6 p-4 sm:mb-0 md:w-1/3">
+              <div class="h-64 overflow-hidden rounded-lg">
+                <img
+                  alt="content"
+                  class="h-full w-full object-cover object-center"
+                  src="images/main.jpg"
+                />
+              </div>
+              <p class="py-3">
+                <span class="block">
+                  <span>
+                    <span class="font-semibold">Company</span> : DUBAI CARBON
+                    Center of Excellence</span
+                  >
+                </span>
+                <span class="block">
+                  <span class="font-semibold">Project</span> : 1900 Villas O& M
+                  and Ideal Homes Villa project
+                </span>
+                <span class="block"
+                  ><span class="font-semibold">Work Description</span> : Solar
+                  Panel Cleaning, Operation & Maintenance.
+                </span>
+              </p>
+            </div>
+          </div>
+          <div class="-mx-4 -mb-10 -mt-4 flex flex-wrap sm:-m-4">
+            <div class="mb-6 p-4 sm:mb-0 md:w-1/3">
+              <div class="h-64 overflow-hidden rounded-lg">
+                <img
+                  alt="content"
+                  class="h-full w-full object-cover object-center"
+                  src="images/main.jpg"
+                />
+              </div>
+              <p class="py-3">
+                <span class="block">
+                  <span>
+                    <span class="font-semibold">Company</span> : DUBAI CARBON
+                    Center of Excellence</span
+                  >
+                </span>
+                <span class="block">
+                  <span class="font-semibold">Project</span> : 1900 Villas O& M
+                  and Ideal Homes Villa project
+                </span>
+                <span class="block"
+                  ><span class="font-semibold">Work Description</span> : Solar
+                  Panel Cleaning, Operation & Maintenance.
+                </span>
+              </p>
+            </div>
+            <div class="mb-6 p-4 sm:mb-0 md:w-1/3">
+              <div class="h-64 overflow-hidden rounded-lg">
+                <img
+                  alt="content"
+                  class="h-full w-full object-cover object-center"
+                  src="images/main.jpg"
+                />
+              </div>
+              <p class="py-3">
+                <span class="block">
+                  <span>
+                    <span class="font-semibold">Company</span> : DUBAI CARBON
+                    Center of Excellence</span
+                  >
+                </span>
+                <span class="block">
+                  <span class="font-semibold">Project</span> : 1900 Villas O& M
+                  and Ideal Homes Villa project
+                </span>
+                <span class="block"
+                  ><span class="font-semibold">Work Description</span> : Solar
+                  Panel Cleaning, Operation & Maintenance.
+                </span>
+              </p>
+            </div>
+            <div class="mb-6 p-4 sm:mb-0 md:w-1/3">
+              <div class="h-64 overflow-hidden rounded-lg">
+                <img
+                  alt="content"
+                  class="h-full w-full object-cover object-center"
+                  src="images/main.jpg"
+                />
+              </div>
+              <p class="py-3">
+                <span class="block">
+                  <span>
+                    <span class="font-semibold">Company</span> : DUBAI CARBON
+                    Center of Excellence</span
+                  >
+                </span>
+                <span class="block">
+                  <span class="font-semibold">Project</span> : 1900 Villas O& M
+                  and Ideal Homes Villa project
+                </span>
+                <span class="block"
+                  ><span class="font-semibold">Work Description</span> : Solar
+                  Panel Cleaning, Operation & Maintenance.
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="mx-auto mt-20 max-w-7xl">
+      <section
+        id="contact"
+        class="body-font relative scroll-m-20 text-gray-600"
+      >
+        <div class="absolute inset-0 rounded-xl bg-gray-300">
+          <iframe
+            width="100%"
+            height="100%"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            title="map"
+            scrolling="no"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13593.135016140088!2d74.3240081!3d31.5986837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39191b79807d5f9d%3A0x724de831330d72e3!2sBadami%20Bagh%2C%20Lahore%2C%20Punjab!5e0!3m2!1sen!2s!4v1660399516163!5m2!1sen!2s"
+            width="600"
+            height="450"
+            class="rounded-xl"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="container mx-auto flex px-5 py-24">
+          <div
+            class="relative z-10 mt-10 flex w-full flex-col rounded-lg bg-white p-8 shadow-md md:ml-auto md:mt-0 md:w-1/2 lg:w-1/3"
+          >
+            <h2
+              class="title-font mb-4 text-center font-header text-xl font-bold text-gray-900"
+            >
+              CONTACT US
+            </h2>
+
+            <p class="mb-5 flex flex-col leading-relaxed text-gray-600">
+              <span class="font-semibold">Address </span>
+              <span>
+                Mowaihat-2, plot No. 1095 Floor-M1, Office No.19 Post Box
+                No.30260 Ajman-UAE
+              </span>
+            </p>
+            <p class="mb-5 flex flex-col leading-relaxed text-gray-600">
+              <span class="font-semibold">Email </span>
+              <span>
+                <a
+                  href="mailto:info.akbcs@gmail.com"
+                  class="text-blue-600 underline"
+                  >info.akbcs@gmail.com
+                </a>
+              </span>
+            </p>
+            <p class="mb-5 flex flex-col leading-relaxed text-gray-600">
+              <span class="font-semibold">Mobile No, </span>
+              <span>
+                <a href="tel:+971505722384" class="text-blue-600 underline"
+                  >+971 50 5722384</a
+                >
+              </span>
+              <span>
+                <a href="tel:+971552994536" class="text-blue-600 underline"
+                  >+971 55 2994536</a
+                >
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="mx-auto max-w-7xl">
+      <section class="body-font text-gray-600">
+        <div class="container mx-auto px-5 py-24">
+          <div class="-m-4 flex flex-wrap text-center">
+            <div class="w-1/2 p-4 sm:w-1/3">
+              <h2
+                class="title-font text-3xl font-medium text-gray-900 sm:text-4xl"
+              >
+                75+
+              </h2>
+              <p class="leading-relaxed">Projects</p>
+            </div>
+            <div class="w-1/2 p-4 sm:w-1/3">
+              <h2
+                class="title-font text-3xl font-medium text-gray-900 sm:text-4xl"
+              >
+                110+
+              </h2>
+              <p class="leading-relaxed">Customers</p>
+            </div>
+            <div class="w-1/2 p-4 sm:w-1/3">
+              <h2
+                class="title-font text-3xl font-medium text-gray-900 sm:text-4xl"
+              >
+                3
+              </h2>
+              <p class="leading-relaxed">Services</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="mx-auto max-w-7xl border-t-2 border-gray-200">
+      <footer class="body-font text-gray-600">
+        <div
+          class="container mx-auto flex flex-col items-center px-5 py-8 sm:flex-row"
+        >
+          <a
+            class="title-font flex items-center justify-center font-medium text-gray-900 md:justify-start"
+          >
+            <img src="images/logo.JPG" width="100" alt="" />
+          </a>
+          <p
+            class="mt-4 text-sm text-gray-500 sm:ml-4 sm:mt-0 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:pl-4"
+          >
+            © 2022 Al Karam Module Installation & Cleaning —
+          </p>
+          <span
+            class="mt-4 inline-flex justify-center sm:ml-auto sm:mt-0 sm:justify-start"
+          >
+            <a class="text-gray-500">
+              <svg
+                fill="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="h-5 w-5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                ></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg
+                fill="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="h-5 w-5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                ></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="h-5 w-5"
+                viewBox="0 0 24 24"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+                ></path>
+              </svg>
+            </a>
+            <a class="ml-3 text-gray-500">
+              <svg
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="0"
+                class="h-5 w-5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="none"
+                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                ></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
