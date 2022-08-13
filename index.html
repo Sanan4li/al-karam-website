@@ -25,7 +25,8 @@
 
             <!-- Mobile menu button -->
             <div class="flex lg:hidden">
-              <button
+              <button 
+                id="menuButton"
                 type="button"
                 class="text-gray-700 hover:text-gray-600 focus:text-gray-600 focus:outline-none"
                 aria-label="toggle menu"
@@ -130,6 +131,25 @@
                 <img
                   alt="content"
                   class="h-full w-full object-cover object-center"
+                  src="images/module-installation.jpg"
+                />
+              </div>
+              <h2
+                class="title-font mt-5 font-header text-3xl font-semibold text-blue-700"
+              >
+                Module Installation
+              </h2>
+              <p class="mt-2 text-base leading-relaxed">
+                We can provide you best module installation service with the help of skilled technicians and workers. 
+                While module installation we always consider all important steps and points. 
+                We’re known for our best quality work.
+              </p>
+            </div>
+            <div class="mb-6 p-4 sm:mb-0 md:w-1/2">
+              <div class="h-64 overflow-hidden rounded-lg">
+                <img
+                  alt="content"
+                  class="h-full w-full object-cover object-center"
                   src="images/main.jpg"
                 />
               </div>
@@ -139,29 +159,9 @@
                 Module Cleaning Service
               </h2>
               <p class="mt-2 text-base leading-relaxed">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Tempora dignissimos amet eius optio beatae, sequi temporibus?
-                Molestias similique labore excepturi. Soluta sunt tenetur magni
-                officia maiores quo sit voluptatum blanditiis.
-              </p>
-            </div>
-            <div class="mb-6 p-4 sm:mb-0 md:w-1/2">
-              <div class="h-64 overflow-hidden rounded-lg">
-                <img
-                  alt="content"
-                  class="h-full w-full object-cover object-center"
-                  src="images/installation.jpg"
-                />
-              </div>
-              <h2
-                class="title-font mt-5 font-header text-3xl font-semibold text-blue-700"
-              >
-                Module Installation
-              </h2>
-              <p class="mt-2 text-base leading-relaxed">
-                Swag shoivdigoitch literally meditation subway tile tumblr
-                cold-pressed. Gastropub street art beard dreamcatcher neutra,
-                ethical XOXO lumbersexual.
+                We can provide you best cleaning and maintenance services. 
+                We use module cleaning wipers. And we don't use any harsh materials as they can cause damage. 
+                Our focus is safety and quality work.
               </p>
             </div>
           </div>
@@ -515,5 +515,143 @@
         </div>
       </footer>
     </div>
+      <script>
+        let menuButton = document.querySelector("#menuButton");
+        let menus = document.querySelector("#menus");
+        menuButton.addEventListener("click", () => {
+          menus.classList.toggle("hidden");
+        });
+
+        var TxtType = function (el, toRotate, period) {
+          this.toRotate = toRotate;
+          this.el = el;
+          this.loopNum = 0;
+          this.period = parseInt(period, 10) || 2000;
+          this.txt = "";
+          this.tick();
+          this.isDeleting = false;
+        };
+
+        TxtType.prototype.tick = function () {
+          var i = this.loopNum % this.toRotate.length;
+          var fullTxt = this.toRotate[i];
+
+          if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+          } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+          }
+
+          this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+
+          var that = this;
+          var delta = 130 - Math.random() * 100;
+
+          if (this.isDeleting) {
+            delta /= 2;
+          }
+
+          if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = false;
+          } else if (this.isDeleting && this.txt === "") {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 100;
+          }
+
+          setTimeout(function () {
+            that.tick();
+          }, delta);
+        };
+
+        function removeActiveClassesAndAddInactive() {
+          document.getElementById("HomeMenu").classList.remove("active");
+          document.getElementById("HomeMenu").classList.add("inactive");
+          document.getElementById("ServicesMenu").classList.add("inactive");
+          document.getElementById("ServicesMenu").classList.remove("active");
+          document.getElementById("PortfolioMenu").classList.remove("active");
+          document.getElementById("PortfolioMenu").classList.add("inactive");
+          document.getElementById("TeamMenu").classList.remove("active");
+          document.getElementById("TeamMenu").classList.add("inactive");
+          document.getElementById("ContactMenu").classList.remove("active");
+          document.getElementById("ContactMenu").classList.add("inactive");
+          document.getElementById("AboutMenu").classList.add("inactive");
+          document.getElementById("AboutMenu").classList.remove("active");
+        }
+        const loader = document.getElementById("loader");
+      const main = document.getElementById("main");
+
+        window.onscroll = function () {
+        
+          var pos = window.pageYOffset;
+          if (pos < 700) {
+            removeActiveClassesAndAddInactive();
+            document.getElementById("HomeMenu").classList.remove("inactive");
+            document.getElementById("HomeMenu").classList.add("active");
+          }
+          if(pos>200){
+              for (let i = 44; i >= 0; i = i - 4) {
+              document
+                .getElementById("howItWorks")
+                .classList.remove(`mt-${i + 4}`);
+              document.getElementById("howItWorks").classList.add(`mt-${i}`);
+            }
+          }
+          if (pos > 900 && pos < 1600) {
+            removeActiveClassesAndAddInactive();
+            document.getElementById("ServicesMenu").classList.add("active");
+            document.getElementById("ServicesMenu").classList.remove("inactive");
+          }
+          if (pos > 1600 && pos < 2300) {
+            removeActiveClassesAndAddInactive();
+            document.getElementById("PortfolioMenu").classList.remove("inactive");
+            document.getElementById("PortfolioMenu").classList.add("active");
+          }
+          if (pos > 2300 && pos < 3000) {
+            removeActiveClassesAndAddInactive();
+            document.getElementById("TeamMenu").classList.remove("inactive");
+            document.getElementById("TeamMenu").classList.add("active");
+          }
+          if (pos > 3700 && pos < 4500) {
+            removeActiveClassesAndAddInactive();
+            document.getElementById("ContactMenu").classList.remove("inactive");
+            document.getElementById("ContactMenu").classList.add("active");
+          }
+          if (pos > 4400 && pos < 4800) {
+            removeActiveClassesAndAddInactive();
+            document.getElementById("AboutMenu").classList.remove("inactive");
+            document.getElementById("AboutMenu").classList.add("active");
+          }
+        };
+
+        window.onload = function () {
+          loader.classList.add("hidden")
+          main.classList.remove("hidden")
+          var elements = document.getElementsByClassName("typewrite");
+          for (var i = 0; i < elements.length; i++) {
+            var toRotate = elements[i].getAttribute("data-type");
+            var period = elements[i].getAttribute("data-period");
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+          }
+          
+          
+          
+          // INJECT CSS
+          var css = document.createElement("style");
+          css.type = "text/css";
+          css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+          document.body.appendChild(css);
+          setTimeout(() => {
+            document.getElementById("mainArea").classList.remove("opacity-0");
+          }, 2000);
+          setTimeout(() => {
+            document.getElementById("mainImage").classList.remove("opacity-0");
+            css.innerHTML = ".typewrite > .wrap { border-right: none}";
+          }, 2200);
+        };
+      </script>
   </body>
 </html>
